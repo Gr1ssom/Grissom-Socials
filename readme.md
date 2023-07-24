@@ -20,7 +20,9 @@ This is an API for a social media platform that handles large amounts of unstruc
 1. Start the server: `npm start`
 2. Access the API routes using a tool like Insomnia or Postman.
 
-## API Routes
+## Video
+<video src="../Videos/Captures/Module18.mp4" controls title="Title"></video>
+
 
 ### Users
 
