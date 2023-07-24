@@ -1,4 +1,3 @@
-// server.js
 const express = require('express');
 const mongoose = require('mongoose');
 const apiRoutes = require('./routes/apiRoutes');
@@ -20,6 +19,17 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/social-network-
 
 // Use API routes
 app.use('/api', apiRoutes);
+
+// CORS configuration (if needed)
+// You can install the 'cors' package and use it like this:
+// const cors = require('cors');
+// app.use(cors());
+
+// Error handling middleware (optional but recommended)
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).json({ message: 'Something went wrong!' });
+});
 
 // Start the server
 app.listen(PORT, () => {
